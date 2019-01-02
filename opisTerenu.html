@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>-->
+    <!--<link rel="shortcut icon" type="image/png" href="favicon.ico"/>-->
+    <!--<link rel='stylesheet' type='text/css' href='index.css'>-->
+
+
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
+
+    <script src="dostepneObiektyTerenowe.js"></script>
+    <script type="text/javascript" src="opisTerenu.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+
+    <meta charset="UTF-8">
+    <title>OP_GEnX</title>
+</head>
+
+
+<body>
+
+
+<!--<p id="demo">tu tablica</p>-->
+
+
+<!--<input id="checkboxN" type="checkbox" name="vehicle" value="N" onchange="myFunctionN()">N - od<br>-->
+<!--<input id="checkboxE" type="checkbox" name="vehicle" value="E" onchange="myFunctionE()">E - od<br>-->
+<!--<input id="checkboxS" type="checkbox" name="vehicle" value="S" onchange="myFunctionS()">S - od<br>-->
+<!--<input id="checkboxW" type="checkbox" name="vehicle" value="W" onchange="myFunctionW()">W - od<br>-->
+
+
+<!--<hr>-->
+
+<!--<form name="job_apply" id="job_apply_frm" action="#">-->
+<!--<h4>dodawanie składników</h4>-->
+
+
+<!--<table cellpadding="10">-->
+<!--<tr>-->
+<!--<td valign="top">-->
+<!--<table>-->
+<!--<tr>-->
+<!--<td><label for="skill">dodaj obiekt: </label></td>-->
+<!--<td><label for="txt_skill"></label><input name="skill" id="txt_skill" maxlength="25" size="15">-->
+<!--</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td><label for="experience">dodaj odległość: </label></td>-->
+<!--<td><input name="experience" id="txt_experience" maxlength="3" size="3"></td>-->
+
+
+<!--</tr>-->
+<!--<tr>-->
+<!--<td><label for="expertise">Expertise: </label></td>-->
+<!--<td><select name="expertise" id="slt_expertise" size="3">-->
+<!--<option value=""> - Select -</option>-->
+<!--<option value="1">Beginner</option>-->
+<!--<option value="2">Intermediate</option>-->
+<!--<option value="3">Advanced</option>-->
+<!--</select>-->
+<!--</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td colspan="2"><input type="button" value="dodaj do listy"-->
+<!--onClick="dodajDoListy(this.form.skill, this.form.experience, this.form.expertise, this.form.skillset);">-->
+<!--</td>-->
+<!--</tr>-->
+<!--</table>-->
+<!--</td>-->
+<!--<td valign="top">obiekty w terenie<br>-->
+<!--<select name="skillset" id="slt_skillset" size="6">-->
+<!--<option value=""> - Your current skillset -</option>-->
+<!--</select><br><br>-->
+<!--<input type="button" name="remove_from_skillset" value="Remove From List"-->
+<!--onclick="removeFromList(this.form.skillset);">-->
+<!--</td>-->
+<!--</tr>-->
+<!--</table>-->
+<!--</td></tr>-->
+<!--<tr>-->
+<!--<td colspan="2">-->
+
+
+<!--<tr>-->
+<!--<td colspan="2"><input type="button" name="Submit Data" value="Submit Information"-->
+<!--onclick="processFormData(this.form);"></td>-->
+<!--</tr>-->
+<!--<p id="demo">przykladowy tekst.</p>-->
+
+
+<!--***************************************************************-->
+
+
+
+<div id="banner">
+
+
+
+
+    <div class="" style="display: inline-block;">
+        <img src="roza.jpg" alt="roza wiatrow" width="100px" height="100px">
+    </div>
+
+    <div class="" style="display: inline-block;">
+        <h1>Generator opisu terenu</h1>
+    </div>
+</div>
+
+
+<br>
+<br>
+
+<table cellpadding="10" border="1">
+    <!--<td valign="top">sss-->
+
+    <tr>
+        <td><label for="odleglosc1">wybierz kierunek: </label></td>
+        <td align="center">
+            <input id='radioN' type="radio" name="gender" value="nn" onchange="ustalKierunek()">N
+            <input id='radioW' type="radio" name="gender" value="ww" onchange="ustalKierunek()">W
+            <input id='radioE' type="radio" name="gender" value="ee" onchange="ustalKierunek()">E
+            <input id='radioS' type="radio" name="gender" value="ss" onchange="ustalKierunek()">S
+        </td>
+
+        <td rowspan="7" width="200px" align="center">
+            <label for="obiekt">testowe okienko z obiektami: </label>
+            <br>
+            <br>
+            <select name="obiekt" id="obiekt1234" onchange="go()" size="16" style="width: 550px;">
+                <!--<option value=""> - aktualne obiekty -</option>-->
+            </select>
+            <br>
+            <br>
+            <input type="button" name="pokaz_obiekty" value="tu usuwanie" onclick="usuwaniezTablicy()">
+        </td>
+    </tr>
+
+    <tr>
+        <td><label for="odleglosc1">podaj odległość od obiektu w metrach: </label></td>
+        <td><input name="odleglosc" type="number" id="odleglosc1" step="50" placeholder="0" min="50"></td>
+    </tr>
+
+    <tr>
+        <td><label for="obiekt">wybierz obiekt: </label></td>
+        <td><select name="obiekt" id="obiekt"></select></td>
+    </tr>
+
+
+    <tr>
+        <td><label for="info">dodatkowe info: </label></td>
+        <td><textarea id="info" name="dodatkoweInfo" rows="3" cols="35"></textarea></td>
+    </tr>
+
+
+    <tr>
+        <td><label>liczba obiektów: </label></td>
+        <td><p id="demo">aktualnie brak obiektów</p></td>
+
+    </tr>
+
+
+    <tr>
+        <td colspan="2" align="center"><input type="button" value="Dodaj do listy!" onClick="dodajDoListy();">
+        </td>
+    </tr>
+
+
+    <tr>
+        <td colspan="2" align="center"><input type="button" name="pokaz_obiekty" value="pokaz listę by skopiować "
+                                              onclick="pokazListe()"></td>
+    </tr>
+
+
+    <script type="text/javascript" src="opisTerenu.js"></script>
+
+
+    <!--<td valign="top">rozpoznane obiekty w terenie-->
+    <!--<br>-->
+    <!--<select name="skillset" id="slt_skillset" size="10" style="width: 350px">-->
+    <!--<option value=""> - aktualne obiekty -</option>-->
+    <!--<option value=""> - adafgsalgj gh sd -</option>-->
+    <!--</select>-->
+    <!--<br><br>-->
+    <!--<input type="button" name="remove_from_skillset" value="Remove From List"-->
+    <!--onclick="removeFromList(this.form.skillset);">-->
+    <!--</td>-->
+
+
+</table>
+<br>
+<br>
+poniżej lista obiektów
+<p id="demo123"></p>
+<br>
+<br>
+
+
+<!--// joko *********************************************************************************************-->
+
+
+<hr>
+<hr>
+<hr>
+
+
+<div style="width: 720px">
+    <iframe width="720" height="400"
+            src="https://maps.google.com/maps?width=720&height=400&hl=en&q=bytom+(Your%20Business%20Name)&ie=UTF8&t=&z=15&iwloc=B&output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a
+            href="https://www.mapsdirections.info/en/journey-planner.htm">www.mapsdirections.info</a></iframe>
+</div>
+<br/>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!--<button onclick="listaObiektow()">listaObiektow</button>-->
+
+<br>
+<br>
+
+<!--<label for="obiekt">wybierz obiekt: </label>-->
+<!--<select id="mySelect" onchange="go()"></select>-->
+
+
+<!--<script src="menu.js"></script>-->
+<!--<script src='index.js'></script>-->
+
+<br>
+<br>
+
+<!--<button onclick="pobierzPlik()">pobierzPlik</button>-->
+
+<br>
+<br>
+<!--<div id="container"></div>-->
+
+<br>
+<br>
+<br>
+
+<!--<button onclick="zaladujdane()">zaladujdane</button>-->
+
+
+</body>
+</html>
