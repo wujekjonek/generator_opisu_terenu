@@ -196,11 +196,9 @@ function wpisztablicedoOkna() {
     document.getElementById("demo123").innerHTML = "";
     document.getElementById("obiekt1234").innerHTML = "";
 
-
     var odleglosc = trim(document.getElementById("odleglosc1").value);
     var obiekt = trim(document.getElementById("obiekt").value);
     var info = document.getElementById("info").value;
-
 
     var t;
     var x;
@@ -228,10 +226,8 @@ function wpisztablicedoOkna() {
     }
     else {
 
-
         var wpisDoBazy = kierunek + "- w odległości " + odleglosc + " m, " + " znajduje się " + obiekt + " " + info;
         obiektywTerenie.push(wpisDoBazy);
-
 
         obiektywTerenie = obiektywTerenie.sort();
         var iloscObiektowwTablicy = obiektywTerenie.length;
