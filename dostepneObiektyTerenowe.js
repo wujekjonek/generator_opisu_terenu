@@ -27,6 +27,30 @@ var dostepneObiektyTerenowe = {
 
 
 
+// pomiary na mapie
+// http://www.barattalo.it/measure-distance-google-maps
+// https://github.com/zhenyanghua/MeasureTool-GoogleMaps-V3
+// http://www.mapdevelopers.com/distance_finder.php
 
-// https://git-scm.com/download
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -93,10 +93,7 @@
 <!--***************************************************************-->
 
 
-
 <div id="banner">
-
-
 
 
     <div class="" style="display: inline-block;">
@@ -125,21 +122,33 @@
         </td>
 
         <td rowspan="7" width="200px" align="center">
-            <label for="obiekt">testowe okienko z obiektami: </label>
+            <label>testowe okienko z obiektami: </label>
             <br>
             <br>
-            <select name="obiekt" id="obiekt1234" onchange="go()" size="16" style="width: 550px;">
+            <select id="obiekt1234" onchange="go()" size="16" style="width: 550px;">
                 <!--<option value=""> - aktualne obiekty -</option>-->
             </select>
             <br>
             <br>
-            <input type="button" name="pokaz_obiekty" value="tu usuwanie" onclick="usuwaniezTablicy()">
+            <input type="button" value="tu usuwanie" onclick="usuwaniezTablicy()">
         </td>
     </tr>
 
     <tr>
-        <td><label for="odleglosc1">podaj odległość od obiektu w metrach: </label></td>
-        <td><input name="odleglosc" type="number" id="odleglosc1" step="50" placeholder="0" min="50"></td>
+        <td><label>podaj odległość od obiektu w metrach: </label></td>
+        <td><input type="number" id="odleglosc1" step="50" placeholder="0" min="50"></td>
+
+
+
+        <!--<td><label for="odleglosc1">podaj odległość od obiektu w metrach: </label></td>-->
+        <!--<td><input name="odleglosc" type="number" id="odleglosc1" step="50" placeholder="0" min="50"></td>-->
+
+
+
+
+
+
+
     </tr>
 
     <tr>
@@ -162,8 +171,7 @@
 
 
     <tr>
-        <td colspan="2" align="center"><input type="button" value="Dodaj do listy!" onClick="dodajDoListy();">
-        </td>
+        <td colspan="2" align="center"><input type="button" value="Dodaj do listy!" onClick="dodajDoListy();"></td>
     </tr>
 
 
@@ -201,13 +209,16 @@ poniżej lista obiektów
 
 
 <hr>
-<hr>
-<hr>
+
+
+<br>
+<br>
+
 
 
 <div style="width: 720px">
     <iframe width="720" height="400"
-            src="https://maps.google.com/maps?width=720&height=400&hl=en&q=bytom+(Your%20Business%20Name)&ie=UTF8&t=&z=15&iwloc=B&output=embed"
+            src="https://maps.google.com/maps?width=720&height=400&hl=pl&q=bytom+&ie=UTF8&t=TERRAIN&z=13&iwloc=B&output=embed"
             frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a
             href="https://www.mapsdirections.info/en/journey-planner.htm">www.mapsdirections.info</a></iframe>
 </div>
@@ -221,10 +232,15 @@ poniżej lista obiektów
 <br>
 <br>
 
+
+
 <!--<button onclick="listaObiektow()">listaObiektow</button>-->
 
 <br>
 <br>
+
+
+
 
 <!--<label for="obiekt">wybierz obiekt: </label>-->
 <!--<select id="mySelect" onchange="go()"></select>-->

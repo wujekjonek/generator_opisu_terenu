@@ -4,7 +4,6 @@ var znacznikN = false;
 var znacznikW = false;
 var znacznikS = false;
 var znacznikE = false;
-var res2;
 
 
 var zz = (dostepneObiektyTerenowe.obiekty.length);
@@ -42,13 +41,12 @@ function go() {
 
     //  var a = trim(document.getElementById("mySelect").value);
 
-    console.log("value: " + document.getElementById("obiekt1234").value);
-    console.log("description: " + document.getElementById("obiekt1234").desc);
+    // console.log("value: " + document.getElementById("obiekt1234").value);
+    // console.log("description: " + document.getElementById("obiekt1234").desc);
 
 
-    var numerPozycjiDoKasowania = document.getElementById("obiekt1234").value.charAt(0)+document.getElementById("obiekt1234").value.charAt(1);
-    console.log("numer pozycji: " + numerPozycjiDoKasowania);
-
+    // var numerPozycjiDoKasowania = document.getElementById("obiekt1234").value.charAt(0) + document.getElementById("obiekt1234").value.charAt(1);
+    // console.log("numer pozycji: " + numerPozycjiDoKasowania);
 
 
 }
@@ -200,8 +198,6 @@ function wpisztablicedoOkna() {
     var obiekt = trim(document.getElementById("obiekt").value);
     var info = document.getElementById("info").value;
 
-    var t;
-    var x;
 
     if (
         document.getElementById("radioN").checked === false
@@ -233,103 +229,13 @@ function wpisztablicedoOkna() {
         var iloscObiektowwTablicy = obiektywTerenie.length;
         document.getElementById("demo").innerHTML = iloscObiektowwTablicy;
 
-
         wpiszTabliceDoOkna();
 
-
-//         for (var i = 0; i < obiektywTerenie.length; i++) {
-//             var res1 = obiektywTerenie[i].charAt(0);
-//
-//
-//             //      var x = document.createElement("OPTION");
-//
-//             if (res1 === "n" && znacznikN === false) {
-//                 znacznikN = true;
-//                 console.log("--- PÓŁNOC");
-//                 //     document.getElementById("demo123").innerHTML += "--- PÓŁNOC" + "<br>";
-//
-//
-//                 // joko - dodaje do listy
-//                 x = document.createElement("OPTION");
-//                 x.setAttribute("value", "PÓŁNOC");
-//                 t = document.createTextNode("--- PÓŁNOC");
-//                 x.appendChild(t);
-//                 document.getElementById("obiekt1234").appendChild(x);
-//
-//
-//             }
-//
-//             if (res1 === "w" && znacznikW === false) {
-//                 znacznikW = true;
-//                 console.log("--- ZACHÓD");
-//                 //         document.getElementById("demo123").innerHTML += "--- ZACHÓD" + "<br>";
-//
-//
-//                 // joko - dodaje do listy
-//                 x = document.createElement("OPTION");
-//                 x.setAttribute("value", "--- ZACHÓD");
-//                 t = document.createTextNode("--- ZACHÓD");
-//                 x.appendChild(t);
-//                 document.getElementById("obiekt1234").appendChild(x);
-//
-//
-//             }
-//
-//             if (res1 === "e" && znacznikE === false) {
-//                 znacznikE = true;
-//                 console.log("--- WSCHÓD");
-// //                document.getElementById("demo123").innerHTML += "--- WSCHÓD" + "<br>";
-//
-//
-//                 // joko - dodaje do listy
-//                 x = document.createElement("OPTION");
-//                 x.setAttribute("value", "--- WSCHÓD");
-//                 t = document.createTextNode("--- WSCHÓD");
-//                 x.appendChild(t);
-//                 document.getElementById("obiekt1234").appendChild(x);
-//
-//
-//             }
-//
-//             if (res1 === "s" && znacznikS === false) {
-//                 znacznikS = true;
-//                 console.log("--- POLUDNIE");
-//                 //          document.getElementById("demo123").innerHTML += "--- POLUDNIE" + "<br>";
-//
-//
-//                 // joko - dodaje do listy
-//                 x = document.createElement("OPTION");
-//                 x.setAttribute("value", "POLUDNIE");
-//                 t = document.createTextNode("--- POLUDNIE");
-//                 x.appendChild(t);
-//                 document.getElementById("obiekt1234").appendChild(x);
-//
-//
-//             }
-//
-//             //      console.log("res1: " + res1);
-//             console.log("obiekt:  " + obiektywTerenie[i]);
-//             //      document.getElementById("demo123").innerHTML += obiektywTerenie[i] + "<br>";
-//
-//
-//             // joko - dodaje do listy
-//             x = document.createElement("OPTION");
-//             x.setAttribute("value", i + "numer" + obiektywTerenie[i]);
-//             t = document.createTextNode("* " + obiektywTerenie[i]);
-//             x.appendChild(t);
-//             document.getElementById("obiekt1234").appendChild(x);
-//
-//
-//         }
-
-
     }
-    ;
 }
 
 
 function pobierzPlik() {
-
 
     var obj = document.getElementById("demo123").innerHTML;
     var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
@@ -341,41 +247,34 @@ function pobierzPlik() {
 
     var container = document.getElementById('container');
     container.appendChild(a);
-
 }
 
 
 function zaladujdane() {
-
     document.getElementById("demo123").innerHTML = fileText;
-
-
 }
+
+
+
+
 
 
 function usuwaniezTablicy() {
+    var numerPozycjiDoKasowania = document.getElementById("obiekt1234").value.charAt(0) + document.getElementById("obiekt1234").value.charAt(1);
+    // console.log("numer wybranej pozycji: int?  " + (numerPozycjiDoKasowania));
+    if (numerPozycjiDoKasowania) {
+        numerPozycjiDoKasowania = parseInt(numerPozycjiDoKasowania);
+        var usuwanyElement = obiektywTerenie[parseInt(numerPozycjiDoKasowania)];
+        obiektywTerenie.splice(obiektywTerenie.indexOf(usuwanyElement), 1);
+        var iloscObiektowwTablicy = obiektywTerenie.length;
+        document.getElementById("demo").innerHTML = iloscObiektowwTablicy;
 
-
-    var numerPozycjiDoKasowania = document.getElementById("obiekt1234").value.charAt(0)+document.getElementById("obiekt1234").value.charAt(1);
-    console.log("numer wybranej pozycji: " + numerPozycjiDoKasowania);
-
-
-
-
-
-    var usuwanyElement = obiektywTerenie[document.getElementById("obiekt1234").value.charAt(0)];
-    obiektywTerenie.splice(obiektywTerenie.indexOf(usuwanyElement), 1);
-
-    var iloscObiektowwTablicy = obiektywTerenie.length;
-    document.getElementById("demo").innerHTML = iloscObiektowwTablicy;
-
-    wpiszTabliceDoOkna();
+        wpiszTabliceDoOkna();
+    } else {
+        console.log("brak zaznaczenia obiektu do usunięcia");
+        return;
+    }
 }
-
-
-
-
-
 
 
 function wpiszTabliceDoOkna() {
@@ -425,18 +324,22 @@ function wpiszTabliceDoOkna() {
         x = document.createElement("OPTION");
 
 
-
         if (i < 10) {
 
             ii = "0" + i;
-            console.log("i-->> ", i);
+            // console.log("i-->> ", i);
             x.setAttribute("value", ii + "Numer" + obiektywTerenie[i]);
+            t = document.createTextNode(ii + "Numer" + obiektywTerenie[i]);
+
         } else {
-            console.log("i==-->> ", i);
+            // console.log("i==-->> ", i);
             x.setAttribute("value", i + "numer" + obiektywTerenie[i]);
+            t = document.createTextNode(i + "Numer" + obiektywTerenie[i]);
 
         }
-        t = document.createTextNode("* " + obiektywTerenie[i]);
+
+
+        //      t = document.createTextNode("* " + obiektywTerenie[i]);
         x.appendChild(t);
         document.getElementById("obiekt1234").appendChild(x);
     }
