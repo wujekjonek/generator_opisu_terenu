@@ -259,9 +259,7 @@ function zaladujdane() {
 
 function usuwaniezTablicy() {
     var numerPozycjiDoKasowania = document.getElementById('obiekt1234').value.charAt(0) + document.getElementById('obiekt1234').value.charAt(1);
-
     console.log("numer wybranej pozycji: int?  " + (numerPozycjiDoKasowania));
-
 
     if (
         numerPozycjiDoKasowania === 'Pó'
