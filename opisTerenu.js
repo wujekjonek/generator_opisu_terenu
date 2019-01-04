@@ -182,7 +182,10 @@ function pokazListe() {
 
 
     }
-    alert(obiektywTerenie);
+    //                alert(obiektywTerenie);
+
+    alert(document.getElementById('obiekt1234').innerHTML);
+
     znacznikN = false;
     znacznikW = false;
     znacznikS = false;
@@ -190,71 +193,26 @@ function pokazListe() {
 }
 
 
-function wpisztablicedoOkna() {
-    console.log("wpisz tablicę do okna");
-    // console.log("obiektywTerenie: " + obiektywTerenie);
-    document.getElementById("demo123").innerHTML = "";
-    document.getElementById('obiekt1234').innerHTML = "";
-
-    var odleglosc = trim(document.getElementById("odleglosc1").value);
-    var obiekt = trim(document.getElementById("obiekt").value);
-    var info = document.getElementById("info").value;
 
 
-    if (
-        document.getElementById("radioN").checked === false
-        &&
-        document.getElementById("radioW").checked === false
-        &&
-        document.getElementById("radioE").checked === false
-        &&
-        document.getElementById("radioS").checked === false
-    ) {
-        alert("Wybierz kierunek!");
-        return;
-    }
-
-    if (isEmpty(odleglosc) || !isInteger(odleglosc)) {
-        alert("Podaj właściwą odległość!");
-        return;
-    }
-    if (obiekt === "") {
-        alert("Wybierz obiekt");
-        return
-    }
-    else {
-
-        var wpisDoBazy = kierunek + "- w odległości " + odleglosc + " m, " + " znajduje się " + obiekt + " " + info;
-        obiektywTerenie.push(wpisDoBazy);
-
-        obiektywTerenie = obiektywTerenie.sort();
-        var iloscObiektowwTablicy = obiektywTerenie.length;
-        document.getElementById("demo").innerHTML = iloscObiektowwTablicy;
-
-        wpiszTabliceDoOkna();
-
-    }
-}
+// function pobierzPlik() {
+//
+//     var obj = document.getElementById("demo123").innerHTML;
+//     var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
+//
+//     var a = document.createElement('a');
+//     a.href = 'data:' + data;
+//     a.download = 'data.json';
+//     a.innerHTML = 'download JSON';
+//
+//     var container = document.getElementById('container');
+//     container.appendChild(a);
+// }
 
 
-function pobierzPlik() {
-
-    var obj = document.getElementById("demo123").innerHTML;
-    var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
-
-    var a = document.createElement('a');
-    a.href = 'data:' + data;
-    a.download = 'data.json';
-    a.innerHTML = 'download JSON';
-
-    var container = document.getElementById('container');
-    container.appendChild(a);
-}
-
-
-function zaladujdane() {
-    document.getElementById("demo123").innerHTML = fileText;
-}
+// function zaladujdane() {
+//     document.getElementById("demo123").innerHTML = fileText;
+// }
 
 
 function usuwaniezTablicy() {
@@ -277,8 +235,7 @@ function usuwaniezTablicy() {
         numerPozycjiDoKasowania = parseInt(numerPozycjiDoKasowania);
         var usuwanyElement = obiektywTerenie[parseInt(numerPozycjiDoKasowania)];
         obiektywTerenie.splice(obiektywTerenie.indexOf(usuwanyElement), 1);
-        var iloscObiektowwTablicy = obiektywTerenie.length;
-        document.getElementById("demo").innerHTML = iloscObiektowwTablicy;
+        document.getElementById("demo").innerHTML = obiektywTerenie.length;
 
         wpiszTabliceDoOkna();
     } else {
@@ -291,8 +248,7 @@ function usuwaniezTablicy() {
 function wpiszTabliceDoOkna() {
     document.getElementById('obiekt1234').innerHTML = "";
     obiektywTerenie = obiektywTerenie.sort();
-    var iloscObiektowwTablicy = obiektywTerenie.length;
-    document.getElementById("demo").innerHTML = iloscObiektowwTablicy;
+    document.getElementById("demo").innerHTML = obiektywTerenie.length;
     for (var i = 0; i < obiektywTerenie.length; i++) {
         var res1 = obiektywTerenie[i].charAt(0);
 
@@ -334,22 +290,32 @@ function wpiszTabliceDoOkna() {
 
         x = document.createElement("OPTION");
 
-
         if (i < 10) {
 
             ii = "0" + i;
             // console.log("i-->> ", i);
             x.setAttribute('value', ii + "Numer" + obiektywTerenie[i]);
-            t = document.createTextNode("• " + obiektywTerenie[i]);
+       //     t = document.createTextNode("• " + obiektywTerenie[i]);
 
         } else {
             // console.log("i==-->> ", i);
             x.setAttribute('value', i + "numer" + obiektywTerenie[i]);
-            t = document.createTextNode("• " + obiektywTerenie[i]);
+       //     t = document.createTextNode("• " + obiektywTerenie[i]);
 
         }
 
-        //      t = document.createTextNode("* " + obiektywTerenie[i]);
+
+//        var res = str.substring(1, 4);
+
+
+
+
+
+              t = document.createTextNode( obiektywTerenie[i].substring(1,100) );
+
+
+
+
         x.appendChild(t);
         document.getElementById('obiekt1234').appendChild(x);
     }
@@ -362,3 +328,10 @@ function wpiszTabliceDoOkna() {
 
 
 
+function wyczyscListe(){
+
+    document.getElementById('obiekt1234').innerHTML = "";
+    obiektywTerenie = [];
+    document.getElementById("demo").innerHTML = obiektywTerenie.length;
+
+}

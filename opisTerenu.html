@@ -51,7 +51,7 @@
         </td>
 
         <td rowspan="7" width="200px" align="center">
-            <label>testowe okienko z obiektami: </label>
+            <label>Lista obiektów</label>
             <br>
             <br>
             <select id="obiekt1234" onchange="go()" size="16" style="width: 550px;">
@@ -59,7 +59,8 @@
             </select>
             <br>
             <br>
-            <input type="button" value="tu usuwanie" onclick="usuwaniezTablicy()">
+            <input type="button" value="Usun obiekt" onclick="usuwaniezTablicy()">
+            <input type="button" value="Wyczyść listę" onclick="wyczyscListe()">
         </td>
     </tr>
 
@@ -94,7 +95,7 @@
 
 
     <tr>
-        <td colspan="2" align="center"><input type="button" value="Dodaj do listy!" onClick="dodajDoListy();"></td>
+        <td colspan="2" align="center"><input type="button" value="Dodaj obiekt" onClick="dodajDoListy();"></td>
     </tr>
 
 
@@ -107,18 +108,6 @@
     <script type="text/javascript" src="opisTerenu.js"></script>
 
 
-    <!--<td valign="top">rozpoznane obiekty w terenie-->
-    <!--<br>-->
-    <!--<select name="skillset" id="slt_skillset" size="10" style="width: 350px">-->
-    <!--<option value=""> - aktualne obiekty -</option>-->
-    <!--<option value=""> - adafgsalgj gh sd -</option>-->
-    <!--</select>-->
-    <!--<br><br>-->
-    <!--<input type="button" name="remove_from_skillset" value="Remove From List"-->
-    <!--onclick="removeFromList(this.form.skillset);">-->
-    <!--</td>-->
-
-
 </table>
 <br>
 <br>
@@ -127,8 +116,6 @@ poniżej lista obiektów
 <br>
 <br>
 
-
-<!--// joko *********************************************************************************************-->
 
 
 <hr>
@@ -139,10 +126,10 @@ poniżej lista obiektów
 
 
 <div style="width: 720px">
-    <iframe width="720" height="400"
+    <iframe width="720" height="400"  frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
             src="https://maps.google.com/maps?width=720&height=400&hl=pl&q=bytom+&ie=UTF8&t=TERRAIN&z=13&iwloc=B&output=embed"
-            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-        </iframe>
+           >
+    </iframe>
 </div>
 <br/>
 
@@ -151,14 +138,11 @@ poniżej lista obiektów
 <br>
 <br>
 
-<iframe width="100%" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-        src="https://maps.google.com/?ie=UTF8&amp;t=m&amp;daddr=26.180782,50.509&amp;spn=0.018486,0.027466&amp;z=15&amp;output=embed"></iframe>
+
 
 
 <br>
 <br>
-
-
 
 
 <br>

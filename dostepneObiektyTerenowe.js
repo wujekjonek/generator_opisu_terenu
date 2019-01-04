@@ -2,24 +2,38 @@ var dostepneObiektyTerenowe = {
 
 
         obiekty: [
+
+
+
+
             {val: 'false', desc: '- wybierz -'},
-            {val: 'zabudowania', desc: 'zabudowania'},
-            {val: 'treny rolnicze', desc: 'treny rolnicze'},
-            {val: 'pola uprawne', desc: 'pola uprawne'},
-            {val: 'miasto', desc: 'miasto'},
-            {val: 'wieś', desc: 'wieś'},
-            {val: 'rereny leśne', desc: 'tereny leśne'},
-            {val: 'pomnik przyrody', desc: 'pomnik przyrody'},
-            {val: 'zakład produkcyjny', desc: 'zakład produkcyjny'},
             {val: 'droga', desc: 'droga'},
+            {val: 'gmina', desc: 'gmina'},
+            {val: 'granica', desc: 'granica'},
+            {val: 'góra', desc: 'góra'},
             {val: 'jezioro', desc: 'jezioro'},
             {val: 'kanał', desc: 'kanał'},
-            {val: 'granica', desc: 'granica'},
-            {val: 'rezerwat przyrody', desc: 'rezerwat przyrody'},
+            {val: 'miasto', desc: 'miasto'},
             {val: 'pasmo górskie', desc: 'pasmo górskie'},
-            {val: 'góra', desc: 'góra'},
-            {val: 'gmina', desc: 'gmina'},
-            {val: 'rzeka', desc: 'rzeka'}
+            {val: 'pola uprawne', desc: 'pola uprawne'},
+            {val: 'pomnik przyrody', desc: 'pomnik przyrody'},
+            {val: 'rereny leśne', desc: 'tereny leśne'},
+            {val: 'rezerwat przyrody', desc: 'rezerwat przyrody'},
+            {val: 'rzeka', desc: 'rzeka'},
+            {val: 'staw', desc: 'staw'},
+            {val: 'treny rolnicze', desc: 'treny rolnicze'},
+            {val: 'wieś', desc: 'wieś'},
+            {val: 'zabudowania', desc: 'zabudowania'},
+            {val: 'zakład produkcyjny', desc: 'zakład produkcyjny'},
+
+
+
+
+
+
+
+
+
 
 
         ]
