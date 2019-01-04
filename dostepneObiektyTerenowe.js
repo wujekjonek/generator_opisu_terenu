@@ -2,7 +2,7 @@ var dostepneObiektyTerenowe = {
 
 
         obiekty: [
-            {val: 'false', desc: '-wybierz -'},
+            {val: 'false', desc: '- wybierz -'},
             {val: 'zabudowania', desc: 'zabudowania'},
             {val: 'treny rolnicze', desc: 'treny rolnicze'},
             {val: 'pola uprawne', desc: 'pola uprawne'},
@@ -17,6 +17,8 @@ var dostepneObiektyTerenowe = {
             {val: 'granica', desc: 'granica'},
             {val: 'rezerwat przyrody', desc: 'rezerwat przyrody'},
             {val: 'pasmo górskie', desc: 'pasmo górskie'},
+            {val: 'góra', desc: 'góra'},
+            {val: 'gmina', desc: 'gmina'},
             {val: 'rzeka', desc: 'rzeka'}
 
 
