@@ -141,6 +141,8 @@ function dodajDoListy() {
 }
 
 
+
+
 function pokazListe() {
 
     console.log("ilosc obiektow: " + obiektywTerenie.length);

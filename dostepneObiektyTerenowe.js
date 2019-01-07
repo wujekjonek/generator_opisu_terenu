@@ -27,6 +27,8 @@ var dostepneObiektyTerenowe = {
 };
 
 
+
+
 // pomiary na mapie
 // http://www.barattalo.it/measure-distance-google-maps
 // https://github.com/zhenyanghua/MeasureTool-GoogleMaps-V3

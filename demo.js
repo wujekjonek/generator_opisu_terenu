@@ -144,6 +144,7 @@ function isDigit(c) {
 // }
 
 
+
 function disableElement(obj) {
   obj.value = ' - N.A. - ';
   obj.disabled = true;
