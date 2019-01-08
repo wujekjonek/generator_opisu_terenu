@@ -1,6 +1,5 @@
 var dostepneObiektyTerenowe = {
 
-
     obiekty: [
         {val: 'false', desc: '- wybierz -'},
         {val: 'droga', desc: 'droga'},
@@ -20,9 +19,7 @@ var dostepneObiektyTerenowe = {
         {val: 'treny rolnicze', desc: 'treny rolnicze'},
         {val: 'wieś', desc: 'wieś'},
         {val: 'zabudowania', desc: 'zabudowania'},
-        {val: 'zakład produkcyjny', desc: 'zakład produkcyjny'},
-
-
+        {val: 'zakład produkcyjny', desc: 'zakład produkcyjny'}
     ]
 };
 
