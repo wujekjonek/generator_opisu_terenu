@@ -64,7 +64,6 @@ function isInteger(str) {
             return false;
         }
     }
-
     return true;
 }
 
@@ -141,8 +140,6 @@ function dodajDoListy() {
 }
 
 
-
-
 function pokazListe() {
 
     console.log("ilosc obiektow: " + obiektywTerenie.length);
@@ -193,8 +190,6 @@ function pokazListe() {
     znacznikS = false;
     znacznikE = false;
 }
-
-
 
 
 // function pobierzPlik() {
@@ -297,26 +292,16 @@ function wpiszTabliceDoOkna() {
             ii = "0" + i;
             // console.log("i-->> ", i);
             x.setAttribute('value', ii + "Numer" + obiektywTerenie[i]);
-       //     t = document.createTextNode("• " + obiektywTerenie[i]);
+            //     t = document.createTextNode("• " + obiektywTerenie[i]);
 
         } else {
             // console.log("i==-->> ", i);
             x.setAttribute('value', i + "numer" + obiektywTerenie[i]);
-       //     t = document.createTextNode("• " + obiektywTerenie[i]);
-
+            //     t = document.createTextNode("• " + obiektywTerenie[i]);
         }
-
-
 //        var res = str.substring(1, 4);
 
-
-
-
-
-              t = document.createTextNode( obiektywTerenie[i].substring(1,100) );
-
-
-
+        t = document.createTextNode(obiektywTerenie[i].substring(1, 100));
 
         x.appendChild(t);
         document.getElementById('obiekt1234').appendChild(x);
@@ -328,10 +313,7 @@ function wpiszTabliceDoOkna() {
 }
 
 
-
-
-function wyczyscListe(){
-
+function wyczyscListe() {
     document.getElementById('obiekt1234').innerHTML = "";
     obiektywTerenie = [];
     document.getElementById("demo").innerHTML = obiektywTerenie.length;
